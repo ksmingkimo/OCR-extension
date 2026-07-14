@@ -1,0 +1,92 @@
+/* content/content.css —— overlay 與 tooltip 樣式，全部加 ocrwl- 前綴避免污染宿主頁面 */
+
+.ocrwl-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  cursor: crosshair;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.ocrwl-hint {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(17, 24, 39, 0.92);
+  color: #fff;
+  font: 13px/1.4 -apple-system, "Segoe UI", system-ui, sans-serif;
+  padding: 6px 14px;
+  border-radius: 999px;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ocrwl-selbox {
+  position: fixed;
+  border: 2px solid #3b82f6;
+  background: rgba(59, 130, 246, 0.18);
+  box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+}
+
+.ocrwl-tooltip {
+  z-index: 2147483647;
+  width: 320px;
+  max-width: calc(100vw - 16px);
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+  padding: 12px 14px;
+  font: 14px/1.5 -apple-system, "Segoe UI", system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+.ocrwl-tip-loading {
+  color: #6b7280;
+}
+
+.ocrwl-tip-error {
+  color: #b91c1c;
+}
+
+.ocrwl-card-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.ocrwl-word {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ocrwl-pos {
+  font-size: 12px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.ocrwl-translation {
+  font-size: 15px;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.ocrwl-example {
+  font-size: 13px;
+  color: #374151;
+  border-left: 3px solid #93c5fd;
+  padding-left: 8px;
+  margin-bottom: 2px;
+}
+
+.ocrwl-example-tr {
+  font-size: 13px;
+  color: #6b7280;
+  padding-left: 8px;
+}

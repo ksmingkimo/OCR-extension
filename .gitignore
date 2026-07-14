@@ -1,0 +1,18 @@
+# 作業系統與編輯器產生的檔案
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+
+# Claude Code 本機設定（工具設定，非專案程式碼）
+.claude/
+
+# 打包輸出
+*.zip
+
+# 規劃筆記（如不想公開可保留此行）
+OCR單字學習設計方案v1.md
+
+# 注意：lib/tesseract/ 內的 OCR 資產「有」被納入版本控制，
+# 這樣別人 clone 後不必自行下載即可直接載入擴充。

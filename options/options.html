@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>設定 · OCR 單字學習</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>設定</h1>
+
+      <label class="field">
+        <span class="label">Gemini API Key</span>
+        <input type="password" id="apiKey" placeholder="貼上你的 API Key" autocomplete="off" />
+        <span class="desc">
+          於
+          <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer"
+            >Google AI Studio</a
+          >
+          取得免費 API Key。金鑰僅儲存在本機瀏覽器。
+        </span>
+      </label>
+
+      <label class="field">
+        <span class="label">模型</span>
+        <select id="model">
+          <option value="gemini-flash-latest">gemini-flash-latest（推薦，自動指向最新 Flash）</option>
+          <option value="gemini-2.5-flash">gemini-2.5-flash（穩定，均衡）</option>
+          <option value="gemini-2.5-flash-lite">gemini-2.5-flash-lite（最省最快）</option>
+          <option value="gemini-3.5-flash">gemini-3.5-flash（最聰明的 Flash）</option>
+          <option value="gemini-2.5-pro">gemini-2.5-pro（複雜任務）</option>
+        </select>
+      </label>
+
+      <div class="actions">
+        <button class="btn primary" id="save">儲存</button>
+        <button class="btn" id="test">測試連線</button>
+      </div>
+
+      <p class="msg" id="msg"></p>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

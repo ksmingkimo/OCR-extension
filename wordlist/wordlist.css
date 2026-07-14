@@ -1,0 +1,151 @@
+/* wordlist/wordlist.css */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font: 15px/1.6 -apple-system, "Segoe UI", system-ui, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffffcc;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.topbar h1 {
+  font-size: 20px;
+  margin: 0;
+}
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#search {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 220px;
+}
+#search:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+.count {
+  font-size: 13px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+main {
+  padding: 24px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.card.pinned {
+  border-color: #fbbf24;
+  box-shadow: 0 2px 12px rgba(251, 191, 36, 0.25);
+}
+.card.pinned::before {
+  content: "📌 置頂";
+  font-size: 11px;
+  color: #b45309;
+  font-weight: 600;
+}
+.card-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.word {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+.pos {
+  font-size: 13px;
+  font-style: italic;
+  color: #6b7280;
+}
+.translation {
+  font-size: 16px;
+  color: #1f2937;
+  margin: 2px 0 6px;
+}
+.example {
+  font-size: 14px;
+  color: #374151;
+  border-left: 3px solid #93c5fd;
+  padding-left: 10px;
+  margin: 0;
+}
+.example-tr {
+  font-size: 13px;
+  color: #6b7280;
+  padding-left: 10px;
+  margin: 0 0 8px;
+}
+.card-footer {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+.chip {
+  padding: 6px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+.chip:hover {
+  background: #f3f4f6;
+}
+.chip.danger {
+  color: #b91c1c;
+  border-color: #fca5a5;
+}
+.chip.danger:hover {
+  background: #fef2f2;
+}
+.empty {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 80px;
+}
+.empty .sub {
+  font-size: 14px;
+}
+.noresult {
+  color: #6b7280;
+}
+kbd {
+  background: #e5e7eb;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 12px;
+}

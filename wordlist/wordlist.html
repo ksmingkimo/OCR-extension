@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>我的單字本 · OCR 單字學習</title>
+    <link rel="stylesheet" href="wordlist.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>📚 我的單字本</h1>
+      <div class="tools">
+        <input type="search" id="search" placeholder="搜尋單字或翻譯…" />
+        <span class="count" id="count"></span>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden>
+        <p>還沒有任何單字。</p>
+        <p class="sub">在網頁上按 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd> 框選英文單字開始收藏吧！</p>
+      </div>
+    </main>
+
+    <script type="module" src="wordlist.js"></script>
+  </body>
+</html>
